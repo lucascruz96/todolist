@@ -12,6 +12,7 @@ import { AnotacoesPage } from '../pages/anotacoes/anotacoes';
 
 import { ProjetosService } from '../providers/projetos-service';
 import { TarefasService } from '../providers/tarefas-service';
+import { AnotacoesService } from '../providers/anotacoes-service';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -47,6 +48,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SplashScreen,
     ProjetosService,
     TarefasService,
+    AnotacoesService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

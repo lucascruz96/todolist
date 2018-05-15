@@ -14,5 +14,19 @@
 
 
 <ion-content padding>
-  <p>Lista de Anotações</p>
+  <ion-list>
+    <ion-card ion-item *ngFor="let a of anotacoes">
+      <ion-card-header>
+        {{a.nome}}
+      </ion-card-header>
+      <ion-card-content>
+        {{a.conteudo}}
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  <div class="centralizado">
+    <button ion-button round color="primary">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </div>
 </ion-content>
