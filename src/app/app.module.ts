@@ -8,6 +8,7 @@ import { ProjetoPage } from '../pages/projeto/projeto';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TarefasPage, Filtro } from '../pages/tarefas/tarefas';
 import { TarefaPage } from '../pages/tarefa/tarefa';
+import { AnotacoesPage } from '../pages/anotacoes/anotacoes';
 
 import { ProjetosService } from '../providers/projetos-service';
 import { TarefasService } from '../providers/tarefas-service';
@@ -23,7 +24,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     TarefasPage,
     TarefaPage,
-    Filtro
+    Filtro,
+    AnotacoesPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ProjetoPage,
     TabsPage,
     TarefasPage,
-    TarefaPage
+    TarefaPage,
+    AnotacoesPage,
   ],
   providers: [
     StatusBar,
