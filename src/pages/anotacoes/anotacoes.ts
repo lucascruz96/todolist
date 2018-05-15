@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { AnotacoesService } from '../../providers/anotacoes-service';
 
 @Component({
@@ -12,7 +12,16 @@ export class AnotacoesPage {
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
+              public loadingCtrl: LoadingController,
               public anotacoesService: AnotacoesService ) {
               this.anotacoes = anotacoesService.getAnotacoes();
+  }
+
+  presentLoading() {
+    this.loadingCtrl.create({
+      content: 'Carregando anotações...',
+      duration: 3000,
+      dismissOnPageChange: true
+    }).present();
   }
 }
