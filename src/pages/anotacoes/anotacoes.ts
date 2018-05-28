@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { AnotacoesService } from '../../providers/anotacoes-service';
 
 @Component({
@@ -15,6 +15,10 @@ export class AnotacoesPage {
               public loadingCtrl: LoadingController,
               public anotacoesService: AnotacoesService ) {
               this.anotacoes = anotacoesService.getAnotacoes();
+  }
+
+  ionViewDidEnter(){
+    this.presentLoading();
   }
 
   presentLoading() {
