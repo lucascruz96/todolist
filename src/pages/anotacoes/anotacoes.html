@@ -8,15 +8,22 @@
 
 
 <ion-content padding>
- <button ion-button block (click)="onTakePicture()">Nova Foto</button>
   <ion-list>
     <ion-card ion-item *ngFor="let a of anotacoes">
       <ion-card-header>
         {{a.nome}}
       </ion-card-header>
+      <img src="{{a.imagem}}"/>
       <ion-card-content>
         {{a.conteudo}}
       </ion-card-content>
+      <ion-row no-padding>
+          <ion-col text-right>
+            <button ion-button clear small color="primary" icon-start (click)="onTakePicture(a.codigo)">
+              <ion-icon name='camera'></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
     </ion-card>
   </ion-list>
 </ion-content>

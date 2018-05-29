@@ -23,7 +23,7 @@ export class AnotacoesPage {
               this.anotacoes = anotacoesService.getAnotacoes();
   }
 
-  onTakePicture() {
+  onTakePicture(codigo) {
     const options: CameraOptions = {
       quality: 100,
       destinationType: this.camera.DestinationType.DATA_URL,
@@ -33,6 +33,7 @@ export class AnotacoesPage {
 
     this.camera.getPicture(options).then((imageData) => {
       this.image = 'data:image/jpeg;base64,' + imageData;
+      this.anotacoes[codigo-1].imagem = this.image;
       }, (err) => {
         this.displayErrorAlert(err);
       });

@@ -6,9 +6,9 @@ import 'rxjs/add/operator/map';
 export class AnotacoesService {
 
   anotacoes = [
-    { codigo: 1, nome: 'Nova página', conteudo: 'Desenvolver uma nova página para o app IONIC.'},
-    { codigo: 2, nome: 'Componentes IONIC', conteudo: 'Os componentes podem ser consultados na página https://ionicframework.com/docs/components.' },
-    { codigo: 3, nome: 'Personalizar', conteudo: 'Personalizar a aplicação' }
+    { codigo: 1, nome: 'Nova página', conteudo: 'Desenvolver uma nova página para o app IONIC.', imagem: ''},
+    { codigo: 2, nome: 'Componentes IONIC', conteudo: 'Os componentes podem ser consultados na página https://ionicframework.com/docs/components.', imagem: '' },
+    { codigo: 3, nome: 'Personalizar', conteudo: 'Personalizar a aplicação', imagem: '' }
   ];
 
   ultimoCodigo = 3;
@@ -45,7 +45,8 @@ export class AnotacoesService {
     this.anotacoes.push({
       codigo: this.ultimoCodigo,
       nome: n,
-      conteudo: v
+      conteudo: v,
+      imagem: ''
     });
   }
 
