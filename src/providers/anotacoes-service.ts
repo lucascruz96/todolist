@@ -6,8 +6,8 @@ import 'rxjs/add/operator/map';
 export class AnotacoesService {
 
   anotacoes = [
-    { codigo: 1, nome: 'Nova página', conteudo: 'Desenvolver uma nova página para o app IONIC.', imagem: ''},
-    { codigo: 2, nome: 'Componentes IONIC', conteudo: 'Os componentes podem ser consultados na página https://ionicframework.com/docs/components.', imagem: '' },
+    { codigo: 1, nome: 'Atividade TESI', conteudo: 'Implementar a utilização de uma funcionalidade nativa.', imagem: ''},
+    { codigo: 2, nome: 'Integrantes do grupo', conteudo: 'Gabriel Apolinário, Lucas Madeira, Rander Leal e Samara Sathler', imagem: '' },
     { codigo: 3, nome: 'Personalizar', conteudo: 'Personalizar a aplicação', imagem: '' }
   ];
 
