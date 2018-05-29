@@ -17,6 +17,8 @@ import { AnotacoesService } from '../providers/anotacoes-service';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { Camera } from '@ionic-native/camera';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -49,7 +51,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ProjetosService,
     TarefasService,
     AnotacoesService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    Camera,
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }
