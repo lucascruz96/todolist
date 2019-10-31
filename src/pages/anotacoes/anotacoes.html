@@ -1,29 +1,33 @@
 <ion-header>
-
   <ion-navbar>
-    <ion-title>Anotacoes</ion-title>
+    <ion-title>Anotações</ion-title>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content padding>
   <ion-list>
     <ion-card ion-item *ngFor="let a of anotacoes">
       <ion-card-header>
-        {{a.nome}}
+        {{ a.nome }}
       </ion-card-header>
-      <img src="{{a.imagem}}"/>
+      <img src="{{ a.imagem }}" />
       <ion-card-content text-wrap>
-        {{a.conteudo}}
+        {{ a.conteudo }}
       </ion-card-content>
       <ion-row no-padding>
-          <ion-col text-right>
-            <button ion-button clear small color="primary" icon-start (click)="onTakePicture(a.codigo)">
-              <ion-icon name='camera'></ion-icon>
-            </button>
-          </ion-col>
-        </ion-row>
+        <ion-col text-right>
+          <button
+            ion-button
+            clear
+            small
+            color="primary"
+            icon-start
+            (click)="onTakePicture(a.codigo)"
+          >
+            <ion-icon name="camera"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
     </ion-card>
   </ion-list>
 </ion-content>
